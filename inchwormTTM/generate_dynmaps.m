@@ -5,11 +5,11 @@ observable{1}(1,1) = 1;observable{2}(1,2) = 1;observable{3}(2,1) = 1;observable{
 
 fp = cell(1,4);
 
-% p=parpool(threads);
-for i = 1:4
+p=parpool(threads);
+parfor i = 1:4
     fp{i} = inchworm_solve_dynmap(param, param.M, Lb, interaction, bare_propagator_dt, observable{i});
 end
-% delete(p);
+delete(p);
 
 idx = @(k, pos) ...
     (k <= -1) * (k + param.N + 1) + ...
