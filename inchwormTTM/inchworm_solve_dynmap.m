@@ -2,14 +2,6 @@ function fp = inchworm_solve_dynmap(param, M, Lb, interaction, bare_propagator_d
 NLb = (size(Lb{1,1}{1,1},1) - 1)/2;
 N = param.N;
 dt = param.dt;
-% Hs = zeros(2,2);
-% Hs(1,1) = param.epsilon; Hs(2,2) = -param.epsilon;
-% Hs(1,2) = param.Delta; Hs(2,1) = param.Delta;
-% bare_propagator_dt = expm(Hs * -param.dt * 1i);
-% interaction = eye(2);
-% interaction(2,2) = -1;
-% observable = eye(2);
-% observable(2,2) = -1;
 identity = eye(2);
 fp = cell(2*N+2, 2*N+2);
 for i = 1: 2 * N + 2
