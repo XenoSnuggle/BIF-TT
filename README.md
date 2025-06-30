@@ -1,4 +1,4 @@
-### This is the MATLAb coding implementation of the paper: **"Accelerated Inchworm Method with Tensor-Train Bath Influence Functional"**.
+### MATLAB Implementation of: **"Accelerated Inchworm Method with Tensor-Train Bath Influence Functional"**.
 
 - The basic tensor-train operations are in /TTutils
 
