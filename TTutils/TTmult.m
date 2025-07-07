@@ -1,4 +1,4 @@
-function [C] = TTmult_ver2(A,B)
+function [C] = TTmult(A,B)
 %Multiplying two tensor train (non-periodic)
 % C = cell(numel(A),1);
 C = cell(1,numel(A));
