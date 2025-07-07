@@ -1,4 +1,4 @@
-function fp = inchworm_solve_ver2(param, M, Lb, interaction, bare_propagator_dt, observable)
+function fp = inchworm_solve(param, M, Lb, interaction, bare_propagator_dt, observable)
 NLb = (size(Lb{1,1}{1,1},1) - 1)/2;
 N = param.N;
 dt = param.dt;
