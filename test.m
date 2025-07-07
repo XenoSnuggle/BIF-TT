@@ -32,7 +32,7 @@ Lb0 = bif_tensor_train(param, method);
 Lb = mult_xi_to_Lb(Lb0,param.xi);
 
 % inchoworm solving
-FP = inchworm_solve_ver2(param, param.M, Lb, interaction, bare_propagator_dt, observable);
+FP = inchworm_solve(param, param.M, Lb, interaction, bare_propagator_dt, observable);
 rho0 = zeros(2,2);
 rho0(1,1) = 1;
 idx = @(k, pos) ...
