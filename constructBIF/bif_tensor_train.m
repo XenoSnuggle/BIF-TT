@@ -30,7 +30,7 @@ for m = 1:2:param.M
             TT_old = TT_extend(Lb{(m-1)/2},[1,k]);
             TT_new = matrice_to_TT(USV_list,m+1,1,k);
             if k == 3
-                Lb_m = TTmult_ver2(TT_old,TT_new);
+                Lb_m = TTmult(TT_old,TT_new);
                 clear TT_old TT_new;
             else
                 l_old = get_bond_link(TT_old);
@@ -40,7 +40,7 @@ for m = 1:2:param.M
                     l = bond_divided(l_old,l_new,m);
                     TT_old = tt_rounding(TT_old, l, true);
                 end
-                tmp_m = TTmult_ver2(TT_old,TT_new);
+                tmp_m = TTmult(TT_old,TT_new);
                 clear TT_old TT_new;
 
                 Lb_m = TTadd(Lb_m,tmp_m);
@@ -66,7 +66,7 @@ for m = 1:2:param.M
                         l = bond_divided(l_old, l_new, m);
                         G_merge = tt_rounding(G_merge, l, true);
                     end
-                    G_merge = TTmult_ver2(G_merge, tmp_m);
+                    G_merge = TTmult(G_merge, tmp_m);
                     clear tmp_m;
                 end
 
